@@ -25,8 +25,7 @@ SECRET_KEY = 'django-insecure-0qi^(vk+a)#b!mjwm*_*=di@g#^3=%!1+jo0aa%-q%oq@fa^o^
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'tradingview-p7g3.onrender.com']
 
 # Application definition
 
