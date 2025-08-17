@@ -19,6 +19,8 @@ class SignalAPI(APIView):
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
+
+class SignalDeleteAPI(APIView):
     def delete(self, request):
         count, _ = Signals.objects.all().delete()
         return Response(
@@ -47,6 +49,8 @@ class SignalDetailsAPI(APIView):
             return Response(serializer.data, status=status.HTTP_200_OK)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
+
+class SignalDetailsDeleteAPI(APIView):
     def delete(self, request, pk):
         signals = self.get_object(pk)
         signals.delete()
